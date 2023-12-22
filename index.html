@@ -648,6 +648,10 @@
             .stars > div:last-child {
                 width: 17px;
             }
+
+            .offerings h2 {
+                font-size: 1.25rem;
+            }
         }
     </style>
 
@@ -1139,9 +1143,7 @@
 </footer>
 <script>
     function isTelephoneNumberSupported() {
-        let link = document.createElement("a");
-        link.href = "tel:";
-        return (link.href !== "tel:");
+        return /iPhone|Android/i.test(navigator.userAgent);
     }
 
     if (!isTelephoneNumberSupported()) {
